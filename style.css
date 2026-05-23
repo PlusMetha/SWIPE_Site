@@ -434,7 +434,7 @@ ul{list-style:none}
   .hamburger.active span:nth-child(2) { opacity: 0; }
   .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background: var(--red); }
   .btn-nav { display: none; }
-  .solutions-grid, .services-grid { grid-template-columns: 1fr; }
+  .solutions-grid, .services-grid, .demo-cards-wrapper { grid-template-columns: 1fr; }
   .hero-stats { flex-direction: column; gap: 10px; width:100%; padding:20px; }
   .stat-divider { width: 100%; height: 1px; }
   .hero-title { font-size: 3.5rem; }
@@ -443,4 +443,10 @@ ul{list-style:none}
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   .contact-form-wrap { padding: 30px; }
   .modal-box { padding: 30px; }
+  
+  /* Mobile layout fixes for Voice & Avatar sections */
+  .avatar-frame { width: 100%; max-width: 350px; height: 450px; margin: 0 auto; }
+  .va-phone-mockup { max-width: 100%; border-width: 8px; }
+  .va-visual::before { width: 100%; max-width: 350px; height: 350px; }
+  .avatar-glow { box-shadow: inset 0 -80px 60px rgba(10,26,68,0.7); }
 }
