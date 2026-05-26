@@ -466,7 +466,7 @@ ul{list-style:none}
   
   /* Grids and Cards */
   .solutions-grid, .services-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-  .demo-cards-wrapper, .demo-landing-grid { grid-template-columns: 1fr; gap: 40px; }
+  .demo-cards-wrapper, .demo-landing-grid, .brochures-grid { grid-template-columns: 1fr; gap: 40px; }
   .service-box, .solution-card, .about-card, .demo-card { padding: 20px 15px; }
   
   /* Hero fixes */
