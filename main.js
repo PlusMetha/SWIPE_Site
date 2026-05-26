@@ -168,37 +168,16 @@ if (contactForm) {
   });
 }
 
-// ===== DEMO FORM MODAL =====
-function openDemoModal() {
-  const modal = document.getElementById('demoModal');
-  if(modal) {
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    
-    // Reset state
-    document.getElementById('demoFormState').style.display = 'block';
-    document.getElementById('demoSuccessState').style.display = 'none';
-    document.getElementById('aiDemoForm').reset();
-  }
-}
-
-const closeDemoModalBtn = document.getElementById('closeDemoModal');
-if(closeDemoModalBtn) {
-  closeDemoModalBtn.addEventListener('click', function() {
-    document.getElementById('demoModal').classList.remove('open');
-    document.body.style.overflow = '';
-  });
-}
-
-const aiDemoForm = document.getElementById('aiDemoForm');
-if (aiDemoForm) {
-  aiDemoForm.addEventListener('submit', function(e) {
+// ===== DEMO PAGE FORM SUBMISSION =====
+const aiDemoPageForm = document.getElementById('aiDemoPageForm');
+if (aiDemoPageForm) {
+  aiDemoPageForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    const btnSubmit = document.getElementById('btnSubmitDemo');
+    const btnSubmit = document.getElementById('btnSubmitPageDemo');
     btnSubmit.innerText = 'Submitting... / กำลังส่งข้อมูล...';
     btnSubmit.disabled = true;
 
-    const formData = new FormData(aiDemoForm);
+    const formData = new FormData(aiDemoPageForm);
     const url = 'https://script.google.com/macros/s/AKfycbzPuWp-0Tk8oCHXBj8N0vHkQgwOQ8G019FPzOtb4RQknlrgeribSGhvyg_VjjJh4em9/exec';
     
     fetch(url, {

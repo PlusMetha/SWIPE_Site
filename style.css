@@ -305,6 +305,20 @@ ul{list-style:none}
 .bg-briefme{background:linear-gradient(135deg, var(--red), #ff4d4d);box-shadow:0 10px 20px rgba(220,32,47,0.25);}
 .bg-briefme:hover{box-shadow:0 15px 30px rgba(220,32,47,0.4);transform:translateY(-3px);color:#fff;}
 
+/* ===== DEMO LANDING PAGE ===== */
+.demo-landing { padding: 160px 0 100px; min-height: 100vh; display: flex; align-items: center; }
+.demo-landing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.demo-info-card { background: #fff; padding: 25px; border-radius: 20px; border: 1px solid #f1f5f9; display: flex; gap: 20px; align-items: center; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: .3s; }
+.demo-info-card:hover { transform: translateX(10px); box-shadow: 0 15px 40px rgba(62,125,254,0.08); border-color: var(--blu); }
+.dic-logo { width: 80px; height: 80px; border-radius: 15px; background: rgba(62,125,254,0.05); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.demo-form-wrapper { background: #fff; padding: 50px; border-radius: 30px; box-shadow: 0 40px 100px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.05); }
+.pin-box { font-size: 3.5rem; font-weight: 900; color: var(--blu); letter-spacing: 8px; background: rgba(62,125,254,0.1); padding: 20px; border-radius: 20px; display: inline-block; margin-bottom: 20px; border: 2px dashed rgba(62,125,254,0.3); }
+.demo-links-grid { display: flex; flex-direction: column; gap: 15px; }
+.demo-link-btn { display: flex; align-items: center; justify-content: center; padding: 20px; border-radius: 15px; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; transition: .3s; }
+.demo-form-wrapper .form-group label { display:block; margin-bottom:8px; font-size:0.95rem; font-weight:600; color:var(--dark); }
+.demo-form-wrapper .form-group input, .demo-form-wrapper .form-group select { background:#f8fafc; border:1px solid #e2e8f0; color:var(--dark); width: 100%; padding: 16px 20px; border-radius: 15px; font-family: var(--font); font-size: 1rem; transition: .3s; }
+.demo-form-wrapper .form-group input:focus, .demo-form-wrapper .form-group select:focus { background:#fff; border-color:var(--blu); outline: none; }
+
 /* ===== SOLUTIONS ===== */
 .solutions{padding:140px 0;background:#f8fafc}
 .solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
@@ -452,7 +466,7 @@ ul{list-style:none}
   
   /* Grids and Cards */
   .solutions-grid, .services-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-  .demo-cards-wrapper { grid-template-columns: 1fr; }
+  .demo-cards-wrapper, .demo-landing-grid { grid-template-columns: 1fr; gap: 40px; }
   .service-box, .solution-card, .about-card, .demo-card { padding: 20px 15px; }
   
   /* Hero fixes */

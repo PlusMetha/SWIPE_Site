@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>SWIPE AI Demos - TalkMe & BriefMe</title>
+  <meta name="description" content="สัมผัสประสบการณ์คุยกับ AI แบบเรียลไทม์ ลงทะเบียนเพื่อรับ PIN ทดลองใช้งาน TalkMe AI และ BriefMe">
+  <link rel="icon" href="SWIPE%20Logo%20PNG.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3.0">
+</head>
+<body style="background: #f8fafc;">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="SWIPE%20Logo%20PNG.png" alt="SWIPE Logo" class="logo-img" style="height: 50px;">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About Us</a></li>
+        <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+        <li><a href="index.html#demo" class="nav-link">AI Demos</a></li>
+      </ul>
+      <a href="index.html#contact" class="btn-nav">Contact Us</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== DEMO LANDING HERO ===== -->
+  <header class="demo-landing">
+    <div class="container demo-landing-grid">
+      
+      <!-- Left Side: Information -->
+      <div class="demo-info">
+        <div class="section-label">SWIPE AI Demos</div>
+        <h1 class="hero-title" style="font-size: 3.5rem; margin-bottom: 20px;">Experience the <span class="gradient-text">Future of AI</span></h1>
+        <p style="font-size: 1.15rem; color: #475569; margin-bottom: 40px; line-height: 1.8;">
+          ลงทะเบียนเพื่อรับรหัส PIN สำหรับเข้าทดลองใช้งานสุดยอดระบบปัญญาประดิษฐ์จาก SWIPE ที่จะมาช่วยเปลี่ยนวิธีการทำงานของธุรกิจคุณ
+        </p>
+
+        <div class="demo-info-card">
+          <div class="dic-logo">
+            <img src="TalkMe%20Ai%20Logo%20PNG.png" alt="TalkMe AI" style="max-height: 40px;">
+          </div>
+          <div>
+            <h4 style="font-family: var(--font2); font-size: 1.2rem; color: var(--dark); margin-bottom: 5px;">TalkMe AI</h4>
+            <p style="font-size: 0.95rem; color: var(--gray);">AI Voice Agent ที่สื่อสารได้อย่างเป็นธรรมชาติ รับสาย-โทรออกได้อัตโนมัติตลอด 24 ชม.</p>
+          </div>
+        </div>
+
+        <div class="demo-info-card">
+          <div class="dic-logo" style="background: rgba(220,32,47,0.05);">
+            <img src="BriefMe%20Analyst%20Ai%20Logo.png" alt="BriefMe" style="max-height: 40px;">
+          </div>
+          <div>
+            <h4 style="font-family: var(--font2); font-size: 1.2rem; color: var(--dark); margin-bottom: 5px;">BriefMe Analyst</h4>
+            <p style="font-size: 0.95rem; color: var(--gray);">AI Business Analyst ที่ถามเจาะลึกและวิเคราะห์ Requirement ได้อย่างมืออาชีพ พร้อมส่งต่อให้ทีมพัฒนา</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Form -->
+      <div class="demo-form-wrapper">
+        <div id="demoFormState">
+          <h3 style="font-size: 1.8rem; font-family: var(--font2); color: var(--dark); margin-bottom: 10px;">Request Access</h3>
+          <p style="color: var(--gray); margin-bottom: 25px;">กรอกข้อมูลเพื่อรับ PIN ทดลองใช้งาน</p>
+          
+          <form id="aiDemoPageForm" class="contact-form">
+            <div class="form-group">
+              <label>Name / ชื่อ-นามสกุล *</label>
+              <input type="text" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label>Company / บริษัท *</label>
+              <input type="text" name="company" required placeholder="Your Company">
+            </div>
+            <div class="form-group">
+              <label>Position / ตำแหน่ง *</label>
+              <input type="text" name="position" required placeholder="e.g. IT Manager">
+            </div>
+            <div class="form-group">
+              <label>Phone / เบอร์โทรศัพท์ *</label>
+              <input type="tel" name="phone" required placeholder="08x-xxx-xxxx">
+            </div>
+            <div class="form-group">
+              <label>Email / อีเมล *</label>
+              <input type="email" name="email" required placeholder="john@company.com">
+            </div>
+            <div class="form-group">
+              <label>Do you have an AI project in mind? *</label>
+              <select name="has_ai_project" required>
+                <option value="">-- Please Select / กรุณาเลือก --</option>
+                <option value="Yes">Yes, we have a project (มีโครงการแล้ว)</option>
+                <option value="Exploring">No, just exploring (ยังไม่มี แค่ศึกษาดู)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center; padding: 18px;" id="btnSubmitPageDemo">
+              Get Demo PIN / รับรหัสทดลองใช้งาน
+            </button>
+          </form>
+        </div>
+
+        <!-- Success State -->
+        <div id="demoSuccessState" style="display:none; text-align:center; padding: 20px 0;">
+          <div style="font-size: 4rem; margin-bottom: 20px;">🎉</div>
+          <h3 style="font-size: 1.8rem; font-family: var(--font2); color: var(--dark); margin-bottom: 10px;">Registration Successful!</h3>
+          <p style="color: var(--gray); font-size: 1.1rem; margin-bottom: 25px;">Your AI testing PIN is:</p>
+          
+          <div class="pin-box">1148</div>
+          
+          <p style="color: var(--gray); margin-bottom: 30px;">โปรดจดจำ PIN ของคุณ จากนั้นเลือกเข้าใช้งาน Demo ด้านล่างได้เลยครับ</p>
+          
+          <div class="demo-links-grid">
+            <a href="https://talk2me.swipe.co.th/realestate" target="_blank" class="demo-link-btn bg-talkme">
+              <img src="TalkMe%20Ai%20Logo%20PNG.png" alt="TalkMe" style="height:25px; margin-right:8px; filter: brightness(0) invert(1);">
+              เข้าสู่ TalkMe AI Demo
+            </a>
+            <a href="https://talk2me.swipe.co.th/majorcineplex" target="_blank" class="demo-link-btn bg-briefme">
+              <img src="BriefMe%20Analyst%20Ai%20Logo.png" alt="BriefMe" style="height:25px; margin-right:8px; filter: brightness(0) invert(1);">
+              เข้าสู่ BriefMe Demo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="SWIPE%20Logo%20PNG.png" alt="SWIPE Logo" class="footer-logo">
+          <p>Enterprise IT Solution Provider - AI & IoT, Cloud, Smart City, Software Development.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SWIPE Company Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
