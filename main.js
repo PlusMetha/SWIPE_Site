@@ -167,3 +167,58 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+// ===== DEMO FORM MODAL =====
+function openDemoModal() {
+  const modal = document.getElementById('demoModal');
+  if(modal) {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    
+    // Reset state
+    document.getElementById('demoFormState').style.display = 'block';
+    document.getElementById('demoSuccessState').style.display = 'none';
+    document.getElementById('aiDemoForm').reset();
+  }
+}
+
+const closeDemoModalBtn = document.getElementById('closeDemoModal');
+if(closeDemoModalBtn) {
+  closeDemoModalBtn.addEventListener('click', function() {
+    document.getElementById('demoModal').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+}
+
+const aiDemoForm = document.getElementById('aiDemoForm');
+if (aiDemoForm) {
+  aiDemoForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btnSubmit = document.getElementById('btnSubmitDemo');
+    btnSubmit.innerText = 'Submitting... / กำลังส่งข้อมูล...';
+    btnSubmit.disabled = true;
+
+    const formData = new FormData(aiDemoForm);
+    const url = 'https://script.google.com/macros/s/AKfycbzPuWp-0Tk8oCHXBj8N0vHkQgwOQ8G019FPzOtb4RQknlrgeribSGhvyg_VjjJh4em9/exec';
+    
+    fetch(url, {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      btnSubmit.innerText = 'Get Demo PIN / รับรหัสทดลองใช้งาน';
+      btnSubmit.disabled = false;
+      if (data.result === 'success') {
+        document.getElementById('demoFormState').style.display = 'none';
+        document.getElementById('demoSuccessState').style.display = 'block';
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert('Error submitting form. Please try again.');
+      btnSubmit.innerText = 'Get Demo PIN / รับรหัสทดลองใช้งาน';
+      btnSubmit.disabled = false;
+    });
+  });
+}

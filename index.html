@@ -312,9 +312,9 @@
           <p>
             <strong>TalkMe AI</strong> คือ AI Voice Agent ที่สื่อสารได้อย่างเป็นธรรมชาติแบบมนุษย์ สามารถรับสายลูกค้า ตอบคำถาม และโทรออกทำแคมเปญเชิงรุกได้อัตโนมัติ ตลอด 24 ชั่วโมง (Inbound & Outbound) สามารถเชื่อมต่อฐานข้อมูลและ API ได้เพื่อให้บริการดีที่สุด
           </p>
-          <a href="#" onclick="alert('ระบบ Demo ของ TalkMe AI กำลังเตรียมความพร้อม จะเปิดให้ทดลองเร็วๆ นี้!'); return false;" class="btn-demo-start bg-talkme">
+          <button onclick="openDemoModal()" class="btn-demo-start bg-talkme">
             ▶ ทดลองใช้งาน TalkMe AI
-          </a>
+          </button>
         </div>
         <!-- BriefMe -->
         <div class="demo-card">
@@ -325,9 +325,9 @@
           <p>
             <strong>BriefMe</strong> คือ AI Business Analyst ที่ถามลึกเข้าใจธุรกิจและวิเคราะห์ได้อย่างเป็นมืออาชีพ เก็บ Requirement ได้ครบ คม ชัด พร้อมส่งให้ทีมพัฒนาได้ทันที ช่วยลดข้อผิดพลาดในการพัฒนาโปรเจกต์
           </p>
-          <a href="#" onclick="alert('ระบบ Demo ของ BriefMe กำลังเตรียมความพร้อม จะเปิดให้ทดลองเร็วๆ นี้!'); return false;" class="btn-demo-start bg-briefme">
+          <button onclick="openDemoModal()" class="btn-demo-start bg-briefme">
             ▶ ทดลองใช้งาน BriefMe
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -615,6 +615,65 @@
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal()">✕</button>
       <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL (Demo Form) ===== -->
+  <div class="modal-overlay" id="demoModal">
+    <div class="modal-box demo-form-wrap" style="max-width: 500px;">
+      <button class="modal-close" id="closeDemoModal">&times;</button>
+      
+      <div id="demoFormState">
+        <div style="text-align:center; margin-bottom: 25px;">
+          <h3 style="font-size: 1.8rem; font-family: var(--font2); color: var(--dark);">Request Demo Access</h3>
+          <p style="color: var(--gray);">ลงทะเบียนเพื่อรับ PIN สำหรับทดลองใช้ AI</p>
+        </div>
+        <form id="aiDemoForm" class="contact-form">
+          <div class="form-group">
+            <label>Name / ชื่อ-นามสกุล *</label>
+            <input type="text" name="name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label>Company / บริษัท *</label>
+            <input type="text" name="company" required placeholder="Your Company">
+          </div>
+          <div class="form-group">
+            <label>Position / ตำแหน่ง *</label>
+            <input type="text" name="position" required placeholder="e.g. IT Manager">
+          </div>
+          <div class="form-group">
+            <label>Phone / เบอร์โทรศัพท์ *</label>
+            <input type="tel" name="phone" required placeholder="08x-xxx-xxxx">
+          </div>
+          <div class="form-group">
+            <label>Email / อีเมล *</label>
+            <input type="email" name="email" required placeholder="john@company.com">
+          </div>
+          <div class="form-group">
+            <label>Do you have an AI project in mind? / คุณมีโครงการ AI หรือไม่? *</label>
+            <select name="has_ai_project" required>
+              <option value="">-- Please Select / กรุณาเลือก --</option>
+              <option value="Yes">Yes, we have a project (มีโครงการแล้ว)</option>
+              <option value="Exploring">No, just exploring (ยังไม่มี แค่ศึกษาดู)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; justify-content:center;" id="btnSubmitDemo">
+            Get Demo PIN / รับรหัสทดลองใช้งาน
+          </button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div id="demoSuccessState" style="display:none; text-align:center; padding: 20px 0;">
+        <div style="font-size: 4rem; margin-bottom: 20px;">🎉</div>
+        <h3 style="font-size: 1.5rem; font-family: var(--font2); color: var(--dark); margin-bottom: 15px;">Registration Successful!</h3>
+        <p style="color: var(--gray); font-size: 1.1rem; margin-bottom: 30px;">Your AI testing PIN is:</p>
+        <div style="font-size: 3rem; font-weight: 900; color: var(--blu); letter-spacing: 5px; background: rgba(62,125,254,0.1); padding: 15px; border-radius: 20px; display:inline-block; margin-bottom: 20px;">
+          1148
+        </div>
+        <p style="color: var(--gray);">Please save this PIN. You will need it to access the AI Demo.</p>
+      </div>
+
     </div>
   </div>
 
